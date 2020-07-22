@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winnie Ku - Project 3 💪</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Where to next?</h1>
+        <p>Take this quiz to determine where your next travel destination should be!</p>
+    </header>
+    <main>
+        <form action="">
+
+            <fieldset class="travelType">
+                <p>What type of travel are you looking for?</p>
+
+                <label for="active">Adventure</label>
+                <input type="radio" id="active" name="travelType" value="adventure">
+
+                <label for="beach">Beach Vacation</label>
+                <input type="radio" id="beach" name="travelType" value="beach">
+
+                <label for="city">City Break</label>
+                <input type="radio" id="city" name="travelType" value="city">
+            </fieldset>
+
+            <!-- filler question; not actually factoring into the logic of the answer -->
+            <fieldset class="companions"> 
+                <p>Who are you travelling with?</p>
+
+                <label for="solo">Me, myself, and I</label>
+                <input type="radio" id="solo" name="companions" value="solo">
+
+                <label for="family">Family trip - gang's all here!</label>
+                <input type="radio" id="family" name="companions" value="family">
+
+                <label for="friends">Friends</label>
+                <input type="radio" id="friends" name="companions" value="friends">
+
+                <label for="partner">Partner</label>
+                <input type="radio" id="partner" name="companions" value="partner">
+            </fieldset>
+
+            <fieldset class="interests">
+                <p>What's most important when you travel?</p>
+
+                <label for="museums">Museums and good phone reception</label>
+                <input type="radio" id="museums" name="interests" value="museums">
+
+                <label for="nature">Nature and being outside</label>
+                <input type="radio" id="nature" name="interests" value="nature">
+
+                <label for="food">Food and more food</label>
+                <input type="radio" id="food" name="interests" value="food">
+
+                <label for="rest">Rest and relaxation</label>
+                <input type="radio" id="rest" name="interests" value="rest">
+            </fieldset>
+
+            <fieldset class="distance"> 
+                <p>How far do you want to go?</p>
+
+                <label for="close">Let's stick to North America</label>
+                <input type="radio" id="close" name="distance" value="close">
+
+                <label for="far">Far enough that I have to learn a new language!</label>
+                <input type="radio" id="far" name="distance" value="far">
+            </fieldset>
+
+            <fieldset class="budget"> 
+                <p>What's your budget for this trip?</p>
+
+                <label for="$">$</label>
+                <input type="radio" id="$" name="budget" value="$">
+
+                <label for="$$">$$</label>
+                <input type="radio" id="$$" name="budget" value="$$">
+                
+                <button type="submit">Where should I go?</button>
+            </fieldset>
+            
+        </form>
+        <section class="results">
+            <!-- results to be added dynamically here! -->
+        </section>
+    </main>
+    
+    <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+    <script src="./scripts/script.js"></script>
+</body>
+</html>
