@@ -7,86 +7,112 @@
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
-    <header>
+    <header class="wrapper">
         <h1>Where to next?</h1>
-        <p>Take this quiz to determine where your next travel destination should be!</p>
+        <h2>Take this quiz to determine where your next travel destination should be!</h2>
+        <button id="startQuiz">Start Quiz</button>
     </header>
-    <main>
+    <main class="wrapper">
         <form action="">
 
-            <fieldset class="travelType">
-                <p>What type of travel are you looking for?</p>
+            <div class="questionOne" id="questionOne">
+                <fieldset class="travelType">
+                    <p>What type of traveller are you?</p>
 
-                <label for="active">Adventure</label>
-                <input type="radio" id="active" name="travelType" value="adventure">
+                    <label for="active">Adventurer</label>
+                    <input type="radio" id="active" name="travelType" value="adventure">
 
-                <label for="beach">Beach Vacation</label>
-                <input type="radio" id="beach" name="travelType" value="beach">
+                    <label for="beach">Beach Bum</label>
+                    <input type="radio" id="beach" name="travelType" value="beach">
 
-                <label for="city">City Break</label>
-                <input type="radio" id="city" name="travelType" value="city">
-            </fieldset>
+                    <label for="city">City Slicker</label>
+                    <input type="radio" id="city" name="travelType" value="city">
 
-            <!-- filler question; not actually factoring into the logic of the answer -->
-            <fieldset class="companions"> 
-                <p>Who are you travelling with?</p>
+                    <label for="food">Foodie</label>
+                    <input type="radio" id="food" name="travelType" value="food">
+                </fieldset>
+                <button id="goToQuestionTwo">Next Question</button>
+            </div>
 
-                <label for="solo">Me, myself, and I</label>
-                <input type="radio" id="solo" name="companions" value="solo">
+            <div class="questionTwo" id="questionTwo">
+                <!-- filler question; not actually factoring into the logic of the answer -->
+                <fieldset class="companions"> 
+                    <p>Who are you travelling with?</p>
 
-                <label for="family">Family trip - gang's all here!</label>
-                <input type="radio" id="family" name="companions" value="family">
+                    <label for="solo">Solo</label>
+                    <input type="radio" id="solo" name="companions" value="solo">
 
-                <label for="friends">Friends</label>
-                <input type="radio" id="friends" name="companions" value="friends">
+                    <label for="family">Family</label>
+                    <input type="radio" id="family" name="companions" value="family">
 
-                <label for="partner">Partner</label>
-                <input type="radio" id="partner" name="companions" value="partner">
-            </fieldset>
+                    <label for="friends">Friends</label>
+                    <input type="radio" id="friends" name="companions" value="friends">
 
-            <fieldset class="interests">
-                <p>What's most important when you travel?</p>
+                    <label for="partner">Partner</label>
+                    <input type="radio" id="partner" name="companions" value="partner">
+                </fieldset>
+                <button id="goToQuestionThree">Next Question</button>
+            </div>
 
-                <label for="museums">Museums and good phone reception</label>
-                <input type="radio" id="museums" name="interests" value="museums">
+            <div class="questionThree" id="questionThree">
+                <!-- filler question -->
+                <fieldset class="interests">
+                    <p>What's most important when you travel?</p>
 
-                <label for="nature">Nature and being outside</label>
-                <input type="radio" id="nature" name="interests" value="nature">
+                    <label for="museums">Museums and old churches</label>
+                    <input type="radio" id="museums" name="interests" value="museums">
 
-                <label for="food">Food and more food</label>
-                <input type="radio" id="food" name="interests" value="food">
+                    <label for="nature">Nature</label>
+                    <input type="radio" id="nature" name="interests" value="nature">
 
-                <label for="rest">Rest and relaxation</label>
-                <input type="radio" id="rest" name="interests" value="rest">
-            </fieldset>
+                    <label for="food">Food</label>
+                    <input type="radio" id="food" name="interests" value="food">
 
-            <fieldset class="distance"> 
-                <p>How far do you want to go?</p>
+                    <label for="rest">Rest and relaxation</label>
+                    <input type="radio" id="rest" name="interests" value="rest">
+                </fieldset>
+                <button id="goToQuestionFour">Next Question</button>
+            </div>
 
-                <label for="close">Let's stick to North America</label>
-                <input type="radio" id="close" name="distance" value="close">
+            <div class="questionFour" id="questionFour">
+                <fieldset class="distance"> 
+                    <p>How far would you be willing to fly?</p>
 
-                <label for="far">Far enough that I have to learn a new language!</label>
-                <input type="radio" id="far" name="distance" value="far">
-            </fieldset>
+                    <label for="close">Let's keep it within North America</label>
+                    <input type="radio" id="close" name="distance" value="close">
 
-            <fieldset class="budget"> 
-                <p>What's your budget for this trip?</p>
+                    <label for="middle">6-7 hours max</label>
+                    <input type="radio" id="middle" name="distance" value="middle">
 
-                <label for="$">$</label>
-                <input type="radio" id="$" name="budget" value="$">
+                    <label for="far">The farther the better!</label>
+                    <input type="radio" id="far" name="distance" value="far">
+                </fieldset>
+                <button id="goToQuestionFive">Next Question</button>
+            </div>
 
-                <label for="$$">$$</label>
-                <input type="radio" id="$$" name="budget" value="$$">
-                
-                <button type="submit">Where should I go?</button>
-            </fieldset>
-            
+            <div class="questionFive" id="questionFive">
+                <fieldset class="budget"> 
+                    <p>What's your budget for this trip?</p>
+
+                    <label for="$">$</label>
+                    <input type="radio" id="$" name="budget" value="$">
+
+                    <label for="$$">$$</label>
+                    <input type="radio" id="$$" name="budget" value="$$">
+                    
+                    <button type="submit" id="goToResult">Where should I go?</button>
+                </fieldset>
+            </div>
+
         </form>
-        <section class="results">
+        <section class="results" id="results">
             <!-- results to be added dynamically here! -->
         </section>
+        <button id="top">Scroll To Top</button>
     </main>
+    <footer class="wrapper">
+        <p>Created at Juno College</p>
+    </footer>
     
     <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
     <script src="./scripts/script.js"></script>

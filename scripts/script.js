@@ -1,73 +1,63 @@
 const destinations = [
     {
-        destName: "Halifax",
-        interests: "food",
-        distance: "close",
-        travelType: "city",
-        budget: "$"
+        destName: "Newfoundland",
+        travelType: "adventure",
+        distance: "close"
     },
     {
-        destName: "New York",
-        interests: "food",
-        distance: "close",
-        travelType: "city",
-        budget: "$$"
+        destName: "Costa Rica",
+        travelType: "adventure",
+        distance: "middle"
     },
     {
-        destName: "Taipei",
-        interests: "food",
-        distance: "far",
-        travelType: "city",
-        budget: "$$"
-    },
-    {
-        destName: "Taipei",
-        interests: "food",
-        distance: "far",
-        travelType: "city",
-        budget: "$$"
+        destName: "Nepal",
+        travelType: "adventure",
+        distance: "far"
     },
     {
         destName: "Mexico",
-        interests: "rest",
-        distance: "close",
         travelType: "beach",
-        budget: "$"
+        distance: "close"
     },
     {
-        destName: "Bali",
-        interests: "rest",
-        distance: "far",
+        destName: "Belize",
         travelType: "beach",
-        budget: "$$"
+        distance: "middle"
+    },
+    {
+        destName: "Australia",
+        travelType: "beach",
+        distance: "far"
     },
     {
         destName: "New York",
-        interests: "museums",
-        distance: "close",
         travelType: "city",
-        budget: "$"
+        distance: "close"
     },
     {
-        destName: "Amsterdam",
-        interests: "museums",
-        distance: "far",
+        destName: "Vienna",
         travelType: "city",
-        budget: "$$"
+        distance: "middle"
     },
     {
-        destName: "Newfoundland",
-        interests: "nature",
-        distance: "close",
-        travelType: "adventure",
-        budget: "$"
+        destName: "Taipei",
+        travelType: "city",
+        distance: "far"
     },
     {
-        destName: "Torres del Paine",
-        interests: "nature",
-        distance: "far",
-        travelType: "adventure",
-        budget: "$$"
+        destName: "Nova Scotia",
+        travelType: "food",
+        distance: "close"
+    },
+    {
+        destName: "Italy",
+        travelType: "food",
+        distance: "middle"
+    },
+    {
+        destName: "Vietnam",
+        travelType: "food",
+        distance: "far"
     }
 ]
 
@@ -76,30 +66,74 @@ const travelQuiz = {};
 
 // Init Function
 travelQuiz.init = function() {
-    
+    travelQuiz.formSubmit();
+    travelQuiz.scrollEffects();
 }
 
-//Event Listener (form submit)
-$("form").on("submit", function(e) {
-    e.preventDefault();
-    const userChoices = {};
-    userChoices.interests = $("input[name=interests]:checked").val();
-    userChoices.distance = $("input[name=distance]:checked").val();
-    userChoices.travelType = $("input[name=travelType]:checked").val();
-    console.log(userChoices);
+travelQuiz.scrollEffects = function() {
+    $("#startQuiz").on('click', function() {
+        const position = $("#questionOne").offset().top;
+        $("html, body").animate({
+            scrollTop: position
+        }, 1000);
+    });
 
-    for (i = 0; i < destinations.length; i++) {
-        // console.log(i);
-        if (destinations[i].distance === userChoices.distance && destinations[i].interests === userChoices.interests) {
-            console.log(destinations[i].destName);
-            $(".results").html(`<h2>${destinations[i].destName}</h2>`);
-        }
-    }
+    $("#goToQuestionTwo").on('click', function() {
+        const position = $("#questionTwo").offset().top;
+        $("html, body").animate({
+            scrollTop: position
+        }, 1000);
+    });
 
-})
+    $("#goToQuestionThree").on('click', function() {
+        const position = $("#questionThree").offset().top;
+        $("html, body").animate({
+            scrollTop: position
+        }, 1000);
+    });
 
+    $("#goToQuestionFour").on('click', function() {
+        const position = $("#questionFour").offset().top;
+        $("html, body").animate({
+            scrollTop: position
+        }, 1000);
+    });
 
+    $("#goToQuestionFive").on('click', function() {
+        const position = $("#questionFive").offset().top;
+        $("html, body").animate({
+            scrollTop: position
+        }, 1000);
+    });
 
+    $("#goToResult").on('click', function() {
+        const position = $("#results").offset().top;
+        $("html, body").animate({
+            scrollTop: position
+        }, 1000);
+    });
+
+    $("#top").on('click', function() {
+        $("html, body").animate({
+            scrollTop: 0
+        }, 1000);
+    });
+}
+
+travelQuiz.formSubmit = function () {
+    $('form').on('submit', function(event) {
+        event.preventDefault();
+        const userChoices = {};
+        userChoices.travelType = $('input[name=travelType]:checked').val();
+        userChoices.distance = $('input[name=distance]:checked').val();
+
+        const resultDestination = destinations.filter( (place) => {
+            return place.travelType === userChoices.travelType && place.distance === userChoices.distance
+        });
+
+        $('.results').html(`<h2>${resultDestination[0].destName}</h2>`);
+    })
+}
 
 
 //Document Ready

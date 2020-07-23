@@ -1,0 +1,17 @@
+.questionOne,
+.questionTwo,
+.questionThree,
+.questionFour,
+.questionFive,
+.results {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.questionTwo,
+.questionFour {
+    background-color: papayawhip;
+}
