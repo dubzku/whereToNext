@@ -10,34 +10,36 @@
     <header class="wrapper">
         <h1>Where to next?</h1>
         <h2>Take this quiz to determine where your next travel destination should be!</h2>
-        <a href="#questionOne" class="scroll">Start Quiz</a>
-        <!-- <button id="startQuiz">Start Quiz</button> -->
+        <button class="startQuiz">Start Quiz</button>
+        <!-- <a href="#questionOne" class="scroll">Start Quiz</a> -->
     </header>
     <main class="wrapper">
         <form action="">
 
+            <!-- Question One -->
             <section class="questionOne" id="questionOne">
                 <fieldset class="travelType">
-                    <p>What type of traveller are you?</p>
+                    <p>What type of travel appeals to you most?</p>
 
-                    <label for="active">Adventurer</label>
+                    <label for="active">Adventure</label>
                     <input type="radio" id="active" name="travelType" value="adventure">
 
-                    <label for="beach">Beach Bum</label>
+                    <label for="beach">Beach</label>
                     <input type="radio" id="beach" name="travelType" value="beach">
 
-                    <label for="city">City Slicker</label>
+                    <label for="city">City Break</label>
                     <input type="radio" id="city" name="travelType" value="city">
 
-                    <label for="food">Foodie</label>
+                    <label for="food">Food Tour</label>
                     <input type="radio" id="food" name="travelType" value="food">
                 </fieldset>
-                <a href="#questionTwo" class="scroll">Next Question</a>
-                <!-- <button id="goToQuestionTwo">Next Question</button> -->
+                <button class="goToQuestionTwo">Next Question</button>
+                <!-- <a href="#" class="goToQuestionTwo">Next Question</a> -->
+                <p class="errorMessage1"><!-- error handling message here --></p>
             </section>
 
+            <!-- Question Two (filler question; doesn't factor into the logic of the answer) -->
             <section class="questionTwo" id="questionTwo">
-                <!-- filler question; not actually factoring into the logic of the answer -->
                 <fieldset class="companions"> 
                     <p>Who are you travelling with?</p>
 
@@ -53,34 +55,37 @@
                     <label for="partner">Partner</label>
                     <input type="radio" id="partner" name="companions" value="partner">
                 </fieldset>
-                <a href="#questionThree" class="scroll">Next Question</a>
-                <!-- <button id="goToQuestionThree">Next Question</button> -->
+                <!-- <a href="#" class="goToQuestionThree">Next Question</a> -->
+                <button class="goToQuestionThree">Next Question</button>
+                <p class="errorMessage2"><!-- error handling message here --></p>
             </section>
 
+            <!-- Question Three (filler question; doesn't factor into the logic of the answer) -->
             <section class="questionThree" id="questionThree">
-                <!-- filler question -->
                 <fieldset class="interests">
-                    <p>What's most important when you travel?</p>
+                    <p>What activites can you usually be found doing when you travel?</p>
 
-                    <label for="museums">Museums and old churches</label>
+                    <label for="museums">Visiting museums and old churches</label>
                     <input type="radio" id="museums" name="interests" value="museums">
 
-                    <label for="nature">Nature</label>
+                    <label for="nature">Hiking through a rainforest</label>
                     <input type="radio" id="nature" name="interests" value="nature">
 
-                    <label for="food">Food</label>
-                    <input type="radio" id="food" name="interests" value="food">
+                    <label for="restaurants">Hitting up all the best restaurants</label>
+                    <input type="radio" id="restaurants" name="interests" value="restaurants">
 
-                    <label for="rest">Rest and relaxation</label>
+                    <label for="rest">Getting a massage by the beach</label>
                     <input type="radio" id="rest" name="interests" value="rest">
                 </fieldset>
-                <a href="#questionFour" class="scroll">Next Question</a>
-                <!-- <button id="goToQuestionFour">Next Question</button> -->
+                <!-- <a href="#" class="goToQuestionFour">Next Question</a> -->
+                <button class="goToQuestionFour">Next Question</button>
+                <p class="errorMessage3"><!-- error handling message here --></p>
             </section>
 
+            <!-- Question Four -->
             <section class="questionFour" id="questionFour">
                 <fieldset class="distance"> 
-                    <p>How far are you willing to go?</p>
+                    <p>How far are you willing to travel?</p>
 
                     <label for="close">Let's keep it within North America</label>
                     <input type="radio" id="close" name="distance" value="close">
@@ -88,42 +93,45 @@
                     <label for="middle">No longer than an 8 hour flight please!</label>
                     <input type="radio" id="middle" name="distance" value="middle">
 
-                    <label for="far">8+ hours - the farther the better!</label>
+                    <label for="far">The farther the better - I want to go to the other side of the world!</label>
                     <input type="radio" id="far" name="distance" value="far">
                 </fieldset>
-                <a href="#questionFive" class="scroll">Next Question</a>
-                <!-- <button id="goToQuestionFive">Next Question</button> -->
+                <button class="goToQuestionFive">Next Question</button>
+                <p class="errorMessage4"><!-- error handling message here --></p>
+                <!-- <a href="#" class="goToQuestionFive">Next Question</a> -->
             </section>
 
+            <!-- Question Five (filler question; doesn't factor into the logic of the answer) -->
             <section class="questionFive" id="questionFive">
                 <fieldset class="tripLength"> 
                     <p>How long are you planning to travel for?</p>
 
-                    <label for="englishYes">This is more of a long-weekend kind of trip.</label>
+                    <label for="short">This is more of a long-weekend kind of trip.</label>
                     <input type="radio" id="short" name="tripLength" value="short">
 
-                    <label for="englishNo">I've been saving up all my vacation days for this!</label>
+                    <label for="long">I've been saving my vacation days all year for this!</label>
                     <input type="radio" id="long" name="tripLength" value="long">
+
+                    <label for="forever">I'm hoping what starts as a gap year eventually becomes a lifestyle.</label>
+                    <input type="radio" id="forever" name="tripLength" value="forever">
                     
                     <button type="submit" id="goToResult">Where should I go?</button>
+                    <p class="errorMessage5"><!-- error handling message here --></p>
                 </fieldset>
             </section>
 
-        
+            <!-- Results Section -->
             <section class="results" id="results">
                 <div class="resultsContainer">
                     <!-- results to be added dynamically here! -->
                 </div>
-                <div>
-                    <button type="reset" id="top">Scroll To Top</button>
-                </div>
+                <button type="reset" id="top">Scroll To Top</button>
             </section>
         </form>
     </main>
     <footer class="wrapper">
         <p>Created at Juno College</p>
     </footer>
-    
     <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
     <script src="./scripts/script.js"></script>
 </body>
