@@ -10,8 +10,7 @@
     <header class="wrapper">
         <h1>Where to next?</h1>
         <h2>Take this quiz to determine where your next travel destination should be!</h2>
-        <button class="startQuiz">Start Quiz</button>
-        <!-- <a href="#questionOne" class="scroll">Start Quiz</a> -->
+        <a href="#questionOne" class="startQuiz">Start Quiz</a>
     </header>
     <main class="wrapper">
         <form action="">
@@ -33,9 +32,8 @@
                     <label for="food">Food Tour</label>
                     <input type="radio" id="food" name="travelType" value="food">
                 </fieldset>
-                <button class="goToQuestionTwo">Next Question</button>
-                <!-- <a href="#" class="goToQuestionTwo">Next Question</a> -->
-                <p class="errorMessage1"><!-- error handling message here --></p>
+                <a href="#questionTwo" class="goToQuestionTwo">Next</a>
+                <p class="error errorMessage1"><!-- error handling message here --></p>
             </section>
 
             <!-- Question Two (filler question; doesn't factor into the logic of the answer) -->
@@ -55,9 +53,8 @@
                     <label for="partner">Partner</label>
                     <input type="radio" id="partner" name="companions" value="partner">
                 </fieldset>
-                <!-- <a href="#" class="goToQuestionThree">Next Question</a> -->
-                <button class="goToQuestionThree">Next Question</button>
-                <p class="errorMessage2"><!-- error handling message here --></p>
+                <a href="#questionThree" class="goToQuestionThree">Next</a>
+                <p class="error errorMessage2"><!-- error handling message here --></p>
             </section>
 
             <!-- Question Three (filler question; doesn't factor into the logic of the answer) -->
@@ -77,9 +74,8 @@
                     <label for="rest">Getting a massage by the beach</label>
                     <input type="radio" id="rest" name="interests" value="rest">
                 </fieldset>
-                <!-- <a href="#" class="goToQuestionFour">Next Question</a> -->
-                <button class="goToQuestionFour">Next Question</button>
-                <p class="errorMessage3"><!-- error handling message here --></p>
+                <a href="#questionFour" class="goToQuestionFour">Next</a>
+                <p class="error errorMessage3"><!-- error handling message here --></p>
             </section>
 
             <!-- Question Four -->
@@ -96,9 +92,8 @@
                     <label for="far">The farther the better - I want to go to the other side of the world!</label>
                     <input type="radio" id="far" name="distance" value="far">
                 </fieldset>
-                <button class="goToQuestionFive">Next Question</button>
-                <p class="errorMessage4"><!-- error handling message here --></p>
-                <!-- <a href="#" class="goToQuestionFive">Next Question</a> -->
+                <a href="#questionFive" class="goToQuestionFive">Next</a>
+                <p class="error errorMessage4"><!-- error handling message here --></p>
             </section>
 
             <!-- Question Five (filler question; doesn't factor into the logic of the answer) -->
@@ -115,17 +110,18 @@
                     <label for="forever">I'm hoping what starts as a gap year eventually becomes a lifestyle.</label>
                     <input type="radio" id="forever" name="tripLength" value="forever">
                     
-                    <button type="submit" id="goToResult">Where should I go?</button>
-                    <p class="errorMessage5"><!-- error handling message here --></p>
+                    <a href="#results" class="goToResult">Next</a>
+                    <p class="error errorMessage5"><!-- error handling message here --></p>
                 </fieldset>
             </section>
 
             <!-- Results Section -->
             <section class="results" id="results">
+                <button type="submit">Where should I go?</button>
                 <div class="resultsContainer">
                     <!-- results to be added dynamically here! -->
                 </div>
-                <button type="reset" id="top">Scroll To Top</button>
+                <button type="reset" id="top">Take Quiz Again</button>
             </section>
         </form>
     </main>

@@ -134,6 +134,7 @@ $(document).ready(function(){
 travelQuiz.init = function() {
     travelQuiz.coolScrollEffects();
     travelQuiz.quizSubmit();
+    travelQuiz.resetResults();
 }
 
 // Helper Function to give back a random item from a given array
@@ -151,8 +152,9 @@ travelQuiz.coolScrollEffects = function() {
         }, 800);
     });
 
-    $(".goToQuestionTwo").on('click', function() {
+    $(".goToQuestionTwo").on('click', function(event) {
         if (!$('input[name=travelType]:checked').val()) {
+            event.preventDefault();
             $('p.errorMessage1').text(`You forgot to answer!`);
         } else {
             const position = $("#questionTwo").offset().top;
@@ -162,8 +164,9 @@ travelQuiz.coolScrollEffects = function() {
         }
     });
 
-    $(".goToQuestionThree").on('click', function() {
+    $(".goToQuestionThree").on('click', function(event) {
         if (!$('input[name=companions]:checked').val()) {
+            event.preventDefault();
             $('p.errorMessage2').text(`You forgot to answer!`);
         } else {
             const position = $("#questionThree").offset().top;
@@ -173,8 +176,9 @@ travelQuiz.coolScrollEffects = function() {
         }
     });
 
-    $(".goToQuestionFour").on('click', function() {
+    $(".goToQuestionFour").on('click', function(event) {
         if (!$('input[name=interests]:checked').val()) {
+            event.preventDefault();
             $('p.errorMessage3').text(`You forgot to answer!`);
         } else {
             const position = $("#questionFour").offset().top;
@@ -184,8 +188,9 @@ travelQuiz.coolScrollEffects = function() {
         }
     });
 
-    $(".goToQuestionFive").on('click', function() {
+    $(".goToQuestionFive").on('click', function(event) {
         if (!$('input[name=distance]:checked').val()) {
+            event.preventDefault();
             $('p.errorMessage4').text(`You forgot to answer!`);
         } else {
             const position = $("#questionFive").offset().top;
@@ -195,8 +200,9 @@ travelQuiz.coolScrollEffects = function() {
         }
     });
     
-    $("#goToResult").on('click', function() {
+    $(".goToResult").on('click', function(event) {
         if (!$('input[name=tripLength]:checked').val()) {
+            event.preventDefault();
             $('p.errorMessage5').text(`You forgot to answer!`);
         } else {
             const position = $("#results").offset().top;
@@ -243,5 +249,13 @@ travelQuiz.quizSubmit = function () {
             $('.resultsContainer').html(`<h2>${finalDestination.destName}</h2>`);
         }
 
+    })
+}
+
+// Function for resetting the results when "Take Quiz Again" is clicked
+travelQuiz.resetResults = function() {
+    $('button[type=reset]').on('click', function() {
+        $('.resultsContainer').empty();
+        $('p.error').empty();
     })
 }
