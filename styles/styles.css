@@ -273,6 +273,19 @@ body {
 header,
 section {
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 h1 {
@@ -352,15 +365,6 @@ input[type=radio]:checked ~ div {
 }
 
 header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(160, 109, 90, 0.4))), url(../assets/ian-dooley-3NCA3tbaE5I-unsplash-medium.jpg);
   background-image: linear-gradient(rgba(160, 109, 90, 0.4)), url(../assets/ian-dooley-3NCA3tbaE5I-unsplash-medium.jpg);
   /* Photo by Ian Dooley on Unsplash */
