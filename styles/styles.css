@@ -255,14 +255,39 @@ a {
   text-decoration: none;
 }
 
+html {
+  font-size: 125%;
+  /*20 px*/
+}
+
+body {
+  font-family: 'Abril Fatface', cursive;
+}
+
 .wrapper {
   max-width: 1200px;
   width: 85%;
   margin: 0 auto;
 }
 
-header {
+header,
+section {
   height: 100vh;
+}
+
+h1 {
+  font-family: 'Abril Fatface', cursive;
+  color: white;
+  font-size: 2rem;
+}
+
+.questionTwo,
+.questionFour,
+.results {
+  background-color: papayawhip;
+}
+
+.questionContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -278,17 +303,55 @@ header {
           align-items: center;
 }
 
-header {
-  background-color: thistle;
+.anchorButton {
+  font-family: 'Abril Fatface', cursive;
+  color: white;
+  background-color: slategray;
+  padding: 20px;
+  display: inline-block;
 }
 
-.questionOne,
-.questionTwo,
-.questionThree,
-.questionFour,
-.questionFive,
-.results {
-  height: 100vh;
+fieldset {
+  border: none;
+}
+
+input[type=radio] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+input[type=radio] + label::before {
+  content: '';
+  display: inline-block;
+  border: 1px solid #000;
+  border-radius: 50%;
+  margin: 0 0.5em;
+  width: 15px;
+  height: 15px;
+}
+
+input[type=radio]:checked + label::before {
+  background-color: red;
+}
+
+section.questionOne ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section.questionOne ul li {
+  margin: 0 15px;
+}
+
+input[type=radio]:checked ~ div {
+  border: gold solid 2px;
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
+}
+
+header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -298,9 +361,24 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(160, 109, 90, 0.4))), url(../assets/ian-dooley-3NCA3tbaE5I-unsplash-medium.jpg);
+  background-image: linear-gradient(rgba(160, 109, 90, 0.4)), url(../assets/ian-dooley-3NCA3tbaE5I-unsplash-medium.jpg);
+  /* Photo by Ian Dooley on Unsplash */
+  background-size: cover;
 }
 
-.questionTwo,
-.questionFour {
-  background-color: papayawhip;
+header .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }

@@ -4,115 +4,172 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Winnie Ku - Project 3 💪</title>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
-    <header class="wrapper">
-        <h1>Where to next?</h1>
-        <h2>Take this quiz to determine where your next travel destination should be!</h2>
-        <a href="#questionOne" class="startQuiz">Start Quiz</a>
+    <header>
+        <div class="wrapper">
+            <h1>Where to next?</h1>
+            <h2>Take this quiz to determine where your next travel destination should be!</h2>
+            <a href="#questionOne" class="startQuiz anchorButton">Start Quiz</a>
+        </div>
     </header>
-    <main class="wrapper">
+    <main>
         <form action="">
-
             <!-- Question One -->
             <section class="questionOne" id="questionOne">
-                <fieldset class="travelType">
+                <div class="wrapper questionContainer">
                     <p>What type of travel appeals to you most?</p>
-
-                    <label for="active">Adventure</label>
-                    <input type="radio" id="active" name="travelType" value="adventure">
-
-                    <label for="beach">Beach</label>
-                    <input type="radio" id="beach" name="travelType" value="beach">
-
-                    <label for="city">City Break</label>
-                    <input type="radio" id="city" name="travelType" value="city">
-
-                    <label for="food">Food Tour</label>
-                    <input type="radio" id="food" name="travelType" value="food">
-                </fieldset>
-                <a href="#questionTwo" class="goToQuestionTwo">Next</a>
-                <p class="error errorMessage1"><!-- error handling message here --></p>
+                    <fieldset class="travelType">
+                        <ul>
+                            <li>
+                                <input type="radio" id="active" name="travelType" value="adventure">
+                                <div class="questionOneImageContainer">
+                                    <label for="active"><img src="./assets/dane-deaner-2eLSh1hbBLE-unsplash.jpg" alt="Person hiking and overlooking the mountains and lake; Photo by Sebastien Goldberg from unsplash.com"></label>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="radio" id="beach" name="travelType" value="beach">
+                                <div>
+                                    <label for="beach"><img src="./assets/jcob-nasyr-67sVPjK6Q7I-unsplash.jpg" alt="Swing hanging on a palm tree on the beach; Photo by Jcob Nasyr from unsplash.com"></label>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="radio" id="city" name="travelType" value="city">
+                                <div>
+                                    <label for="city"><img src="./assets/heather-shevlin-WqcRpNq_220-unsplash.jpg" alt="City scenery - apartments, taxis, and buildings; Photo by Heather Shevlin from unsplash.com"></label>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="radio" id="food" name="travelType" value="food">
+                                <div>
+                                    <label for="food"><img src="./assets/spencer-davis-yqJ_zX8vat8-unsplash.jpg" alt="Person taking a photo of their hamburger and fries meal; Photo by Spencer Davis from unsplash.com"></label>
+                                </div>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <div>
+                        <a href="#questionTwo" class="goToQuestionTwo anchorButton">Next</a>
+                        <p class="error errorMessage1"><!-- error handling message here --></p>
+                    </div>
+                </div>
             </section>
 
             <!-- Question Two (filler question; doesn't factor into the logic of the answer) -->
-            <section class="questionTwo" id="questionTwo">
-                <fieldset class="companions"> 
+            <section class="questionTwo" id="questionTwo">  
+                <div class="wrapper questionContainer">
                     <p>Who are you travelling with?</p>
-
-                    <label for="solo">Solo</label>
-                    <input type="radio" id="solo" name="companions" value="solo">
-
-                    <label for="family">Family</label>
-                    <input type="radio" id="family" name="companions" value="family">
-
-                    <label for="friends">Friends</label>
-                    <input type="radio" id="friends" name="companions" value="friends">
-
-                    <label for="partner">Partner</label>
-                    <input type="radio" id="partner" name="companions" value="partner">
-                </fieldset>
-                <a href="#questionThree" class="goToQuestionThree">Next</a>
-                <p class="error errorMessage2"><!-- error handling message here --></p>
+                    <fieldset class="companions"> 
+                        <ul>
+                            <li>
+                                <input type="radio" id="solo" name="companions" value="solo">
+                                <label for="solo">Solo</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="family" name="companions" value="family">
+                                <label for="family">Family</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="friends" name="companions" value="friends">
+                                <label for="friends">Friends</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="partner" name="companions" value="partner">
+                                <label for="partner">Partner</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <div>
+                        <a href="#questionThree" class="goToQuestionThree anchorButton">Next</a>
+                        <p class="error errorMessage2"><!-- error handling message here --></p>
+                    </div>
+                </div>
             </section>
 
             <!-- Question Three (filler question; doesn't factor into the logic of the answer) -->
             <section class="questionThree" id="questionThree">
-                <fieldset class="interests">
+                <div class="wrapper questionContainer">
                     <p>What activites can you usually be found doing when you travel?</p>
-
-                    <label for="museums">Visiting museums and old churches</label>
-                    <input type="radio" id="museums" name="interests" value="museums">
-
-                    <label for="nature">Hiking through a rainforest</label>
-                    <input type="radio" id="nature" name="interests" value="nature">
-
-                    <label for="restaurants">Hitting up all the best restaurants</label>
-                    <input type="radio" id="restaurants" name="interests" value="restaurants">
-
-                    <label for="rest">Getting a massage by the beach</label>
-                    <input type="radio" id="rest" name="interests" value="rest">
-                </fieldset>
-                <a href="#questionFour" class="goToQuestionFour">Next</a>
-                <p class="error errorMessage3"><!-- error handling message here --></p>
+                    <fieldset class="interests">
+                        <ul>
+                            <li>
+                                <input type="radio" id="museums" name="interests" value="museums">
+                                <label for="museums">Visiting museums and old churches</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="nature" name="interests" value="nature">
+                                <label for="nature">Hiking through a rainforest</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="restaurants" name="interests" value="restaurants">
+                                <label for="restaurants">Hitting up all the best restaurants</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="rest" name="interests" value="rest">
+                                <label for="rest">Getting a massage by the beach</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <div>
+                        <a href="#questionFour" class="goToQuestionFour anchorButton">Next</a>
+                        <p class="error errorMessage3"><!-- error handling message here --></p>
+                    </div>
+                </div>
             </section>
 
             <!-- Question Four -->
             <section class="questionFour" id="questionFour">
-                <fieldset class="distance"> 
+                <div class="wrapper questionContainer">
                     <p>How far are you willing to travel?</p>
-
-                    <label for="close">Let's keep it within North America</label>
-                    <input type="radio" id="close" name="distance" value="close">
-
-                    <label for="middle">No longer than an 8 hour flight please!</label>
-                    <input type="radio" id="middle" name="distance" value="middle">
-
-                    <label for="far">The farther the better - I want to go to the other side of the world!</label>
-                    <input type="radio" id="far" name="distance" value="far">
-                </fieldset>
-                <a href="#questionFive" class="goToQuestionFive">Next</a>
-                <p class="error errorMessage4"><!-- error handling message here --></p>
+                    <fieldset class="distance">     
+                        <ul>
+                            <li>
+                                <input type="radio" id="close" name="distance" value="close">
+                                <label for="close">Let's keep it within North America</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="middle" name="distance" value="middle">
+                                <label for="middle">No longer than an 8 hour flight please!</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="far" name="distance" value="far">
+                                <label for="far">The farther the better - I want to go to the other side of the world!</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <div>
+                        <a href="#questionFive" class="goToQuestionFive anchorButton">Next</a>
+                        <p class="error errorMessage4"><!-- error handling message here --></p>
+                    </div>
+                </div>
             </section>
 
             <!-- Question Five (filler question; doesn't factor into the logic of the answer) -->
             <section class="questionFive" id="questionFive">
-                <fieldset class="tripLength"> 
+                <div class="wrapper questionContainer">
                     <p>How long are you planning to travel for?</p>
-
-                    <label for="short">This is more of a long-weekend kind of trip.</label>
-                    <input type="radio" id="short" name="tripLength" value="short">
-
-                    <label for="long">I've been saving my vacation days all year for this!</label>
-                    <input type="radio" id="long" name="tripLength" value="long">
-
-                    <label for="forever">I'm hoping what starts as a gap year eventually becomes a lifestyle.</label>
-                    <input type="radio" id="forever" name="tripLength" value="forever">
-                    
-                    <a href="#results" class="goToResult">Next</a>
-                    <p class="error errorMessage5"><!-- error handling message here --></p>
-                </fieldset>
+                    <fieldset class="tripLength"> 
+                        <ul>
+                            <li>
+                                <label for="short">This is more of a long-weekend kind of trip.</label>
+                                <input type="radio" id="short" name="tripLength" value="short">
+                            </li>
+                            <li>
+                                <label for="long">I've been saving my vacation days all year for this!</label>
+                                <input type="radio" id="long" name="tripLength" value="long">
+                            </li>
+                            <li>
+                                <label for="forever">I'm hoping what starts as a gap year eventually becomes a lifestyle.</label>
+                                <input type="radio" id="forever" name="tripLength" value="forever">
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <div>
+                        <a href="#results" class="goToResult anchorButton">Next</a>
+                        <p class="error errorMessage5"><!-- error handling message here --></p>
+                    </div>
+                </div>
             </section>
 
             <!-- Results Section -->

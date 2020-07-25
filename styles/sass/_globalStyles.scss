@@ -1,5 +1,85 @@
+html {
+    font-size: 125%; /*20 px*/
+}
+
+body {
+    font-family: 'Abril Fatface', cursive;
+}
+
 .wrapper {
     max-width: 1200px;
     width: 85%;
     margin: 0 auto;
 }
+
+header,
+section {
+    height: 100vh;
+}
+
+h1 {
+    font-family: 'Abril Fatface', cursive;
+    color: white;
+    font-size: 2rem;
+}
+
+.questionTwo,
+.questionFour,
+.results {
+    background-color: papayawhip;
+}
+
+.questionContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.anchorButton {
+    font-family: 'Abril Fatface', cursive;
+    color: white;
+    background-color: slategray;
+    padding: 20px;
+    display: inline-block;
+}
+
+fieldset {
+    border: none;
+}
+
+input[type=radio] {
+    appearance: none;
+}
+
+input[type=radio]+label::before {
+    content: '';
+    display: inline-block;
+    border: 1px solid #000;
+    border-radius: 50%;
+    margin: 0 0.5em;
+    width: 15px;
+    height: 15px;
+}
+
+input[type=radio]:checked+label::before {
+    background-color: red;
+}
+
+section.questionOne {
+    ul {
+        display: flex;
+        li {
+            margin: 0 15px;
+        }
+    }
+}
+
+
+input[type=radio]:checked ~ div {
+    border: gold solid 2px;
+    transform: scale(1.08);
+}
+
+

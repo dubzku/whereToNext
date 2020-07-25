@@ -232,11 +232,11 @@ travelQuiz.quizSubmit = function () {
         userChoices.interests = $('input[name=interests]:checked').val();
         userChoices.tripLength = $('input[name=tripLength]:checked').val();
 
+
         if (!userChoices.travelType || !userChoices.distance || !userChoices.companions || !userChoices.interests || !userChoices.tripLength ) {
             $('.resultsContainer').html(`<h2>You forgot to fill in some fields!</h2>`);
         } else {
             // Filter through the destinations object and return results that match the condition of same travelType AND same distance
-
             // Store the results in a new array called possibleDestinations
             const possibleDestinations = destinations.filter( (possibleResult) => {
             return possibleResult.travelType === userChoices.travelType && possibleResult.distance === userChoices.distance;
