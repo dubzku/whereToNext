@@ -255,11 +255,11 @@ a {
   text-decoration: none;
 }
 
-/* Mint Cream */
 /* Bittersweet */
 /* Midnight Green Eagle Green */
 /* Medium Turquoise */
 /* Naples Yellow */
+/* Mint Cream */
 html {
   font-size: 125%;
   /*20 px*/
@@ -289,8 +289,14 @@ button {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 2.4rem;
   color: white;
+}
+
+.questionOne,
+.questionThree,
+.results {
+  background-color: #F7FFF7;
 }
 
 .questionContainer {
@@ -309,15 +315,30 @@ h1 {
           align-items: center;
 }
 
-p {
+p:not(footer p) {
   margin: 30px 0;
 }
 
-.anchorButton {
+.anchorButton,
+button {
   padding: 15px 25px;
   display: inline-block;
   border-radius: 8px;
-  border: black solid 2px;
+  border: #1A535C solid 2px;
+  background-color: #FF6B6B;
+  color: #F7FFF7;
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+.anchorButton:hover, .anchorButton:focus,
+button:hover,
+button:focus {
+  border: #000 solid 3.5px;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 /* Form Styling */
@@ -337,30 +358,24 @@ input[type="radio"] + label {
 input[type="radio"] + label::before {
   content: '';
   position: absolute;
-  left: -24px;
+  left: -30px;
   top: 5px;
   border-radius: 50%;
-  border: 1px solid #000;
   width: 18px;
   height: 18px;
+  border: #000 solid 1px;
 }
 
 input[type=radio]:checked + label::before {
-  background-color: black;
+  background-color: #FF6B6B;
 }
 
 input[type="radio"]:focus + label::before {
-  -webkit-box-shadow: 0 0px 8px #FF6B6B;
-          box-shadow: 0 0px 8px #FF6B6B;
   border: 3px solid #FF6B6B;
 }
 
 p.error {
   margin-top: 20px;
-}
-
-button {
-  cursor: pointer;
 }
 
 header {
@@ -370,8 +385,8 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(44, 26, 8, 0.68))), url(../assets/ian-dooley-3NCA3tbaE5I-unsplash-medium.jpg);
-  background-image: linear-gradient(rgba(44, 26, 8, 0.68)), url(../assets/ian-dooley-3NCA3tbaE5I-unsplash-medium.jpg);
+  background-image: -webkit-gradient(linear, right top, left bottom, from(white), to(rgba(26, 83, 92, 0.68))), url(../assets/harley-davidson-56R8TzG7Lzc-unsplash.jpg);
+  background-image: linear-gradient(to bottom left, white, rgba(26, 83, 92, 0.68)), url(../assets/harley-davidson-56R8TzG7Lzc-unsplash.jpg);
   /* Photo by Ian Dooley on Unsplash */
   background-size: cover;
 }
@@ -389,16 +404,53 @@ header .wrapper {
           align-items: center;
 }
 
+header p {
+  position: relative;
+  top: 110px;
+}
+
 .startQuiz {
-  padding: 15px 25px;
-  display: inline-block;
-  border-radius: 8px;
-  border: black solid 2px;
-  color: white;
-  background-color: none;
-  border: white solid 3px;
+  color: #FFF;
   position: absolute;
-  bottom: 120px;
+  bottom: 30px;
+  font-size: 4.5rem;
+  -webkit-animation: bounce infinite ease 2s;
+          animation: bounce infinite ease 2s;
+}
+
+.startQuiz :hover,
+.startQuiz :focus {
+  color: #1A535C;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-70px);
+            transform: translateY(-70px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-70px);
+            transform: translateY(-70px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 
 section.questionOne {
@@ -432,22 +484,22 @@ section.questionOne input[type=radio]:focus ~ div {
 section.questionOne input[type=radio]:checked ~ div {
   -webkit-transform: scale(1.07);
           transform: scale(1.07);
-  border: #FF6B6B solid 3px;
+  border: #000 solid 3px;
 }
 
 section.questionTwo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.6))), url(../assets/dino-reichmuth-A5rCN8626Ck-unsplash.jpg);
-  background-image: linear-gradient(rgba(255, 255, 255, 0.6)), url(../assets/dino-reichmuth-A5rCN8626Ck-unsplash.jpg);
-  /* Photo by Dino Reichmuth on Unsplash */
+  background-color: #1A535C;
   background-size: cover;
   background-position: center;
+  color: #F7FFF7;
 }
 
 section.questionTwo fieldset {
-  border: solid black 3px;
+  padding: 50px;
+  border: #F7FFF7 double 5px;
 }
 
 section.questionTwo fieldset ul li {
@@ -488,22 +540,23 @@ section.questionThree input[type=radio]:focus ~ div {
 section.questionThree input[type=radio]:checked ~ div {
   -webkit-transform: scale(1.07);
           transform: scale(1.07);
-  border: #FF6B6B solid 3px;
+  border: #000 solid 3px;
 }
 
 section.questionFour {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.6))), url(../assets/margo-brodowicz-KZHhnb6XsQI-unsplash.jpg);
-  background-image: linear-gradient(rgba(255, 255, 255, 0.6)), url(../assets/margo-brodowicz-KZHhnb6XsQI-unsplash.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(78, 205, 196, 0.6))), url(../assets/margo-brodowicz-KZHhnb6XsQI-unsplash.jpg);
+  background-image: linear-gradient(rgba(78, 205, 196, 0.6)), url(../assets/margo-brodowicz-KZHhnb6XsQI-unsplash.jpg);
   /* Photo by Margo Brodowicz on Unsplash */
   background-size: cover;
   background-position: top;
 }
 
 section.questionFour fieldset {
-  border: solid black 3px;
+  padding: 50px;
+  border: #000 double 3px;
 }
 
 section.questionFour h2 {
@@ -542,22 +595,9 @@ section.results .wrapper {
 }
 
 footer {
-  background-color: slategray;
-}
-
-footer .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-footer .wrapper button {
-  display: block;
+  background-color: #1A535C;
+  text-align: center;
+  color: #FFF;
+  padding: 15px 0;
+  margin-top: 20px;
 }

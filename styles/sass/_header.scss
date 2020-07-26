@@ -1,22 +1,35 @@
 header {
     display: flex;
     align-items: center;
-    background-image: linear-gradient(rgba(44, 26, 8, 0.68)), url(../assets/ian-dooley-3NCA3tbaE5I-unsplash-medium.jpg); /* Photo by Ian Dooley on Unsplash */
+    background-image: linear-gradient(to bottom left, white, rgba(26, 83, 92, 0.68)), url(../assets/harley-davidson-56R8TzG7Lzc-unsplash.jpg); /* Photo by Ian Dooley on Unsplash */
     background-size: cover;
     .wrapper {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+    p {
+        position: relative;
+        top: 110px;
+    }
 }
 
 .startQuiz {
-    @include anchorButtonDecor;
-    color: white;
-    background-color: none;
-    border: white solid 3px;
+    color: #FFF;
     position: absolute;
-    bottom: 120px;
+    bottom: 30px;
+    font-size: 4.5rem;
+    animation: bounce infinite ease 2s;
+    & :hover,
+    & :focus {
+        color: $colourTwo;
+    }
+}
+
+@keyframes bounce {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-70px); }
+    100% { transform: translateY(0); }
 }
 
 

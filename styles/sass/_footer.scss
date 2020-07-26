@@ -1,11 +1,7 @@
 footer {
-    background-color: slategray;
-    .wrapper {
-        button {
-            display: block;
-        }
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+    background-color: $colourTwo;
+    text-align: center;
+    color: #FFF;
+    padding: 15px 0;
+    margin-top: 20px;
 }

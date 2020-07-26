@@ -237,15 +237,15 @@ travelQuiz.quizSubmit = function () {
             // Use the randomizer helper function to pick a final result from the list of possible results
             const finalDestination = travelQuiz.arrayRandomizer(possibleDestinations);
 
-            // Show the results in the DOM! 
+            // Display the result in the DOM
             const displayDestName = $('<h2>').text(`You should go to ${finalDestination.destName}!`);
             const displayDestPhoto = $('<img>').attr('src', finalDestination.img).attr('alt', finalDestination.alt);
             $('.resultsContainer').append(displayDestName);
             $('.imageResultsContainer').append(displayDestPhoto);
+
+            // Toggle button class to hide submit button when form is submitted - prevents the user from clicking submit multiple times 
             $('button[type=submit]').toggleClass('toggle');
-
         }
-
     })
 }
 
