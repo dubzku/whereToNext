@@ -1,21 +1,15 @@
 section.questionTwo {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-section.questionTwo {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.6)), url(../assets/dino-reichmuth-A5rCN8626Ck-unsplash.jpg);
-    /* Photo by Dino Reichmuth on Unsplash */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.6)), url(../assets/dino-reichmuth-A5rCN8626Ck-unsplash.jpg); /* Photo by Dino Reichmuth on Unsplash */
     background-size: cover;
     background-position: center;
-}
-
-section.questionTwo fieldset {
-    border: solid black 3px;
-}
-
-section.questionTwo ul li {
-    margin: 20px 0;
+    fieldset {
+        border: solid black 3px;
+        ul li {
+            margin: 20px 0;
+        }
+    }
+    h2 {
+        text-align: center;
+    }
 }

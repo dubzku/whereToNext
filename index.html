@@ -25,25 +25,25 @@
                         <ul>
                             <li>
                                 <input type="radio" id="active" name="travelType" value="adventure">
-                                <div class="questionOneImageContainer">
+                                <div class="imageContainer">
                                     <label for="active"><img src="./assets/sebastien-goldberg-BKLHxgbYFDI-unsplash.jpg" alt="Person hiking up a mountain; Photo by Dane Deaner from unsplash.com"></label>
                                 </div>
                             </li>
                             <li>
                                 <input type="radio" id="beach" name="travelType" value="beach">
-                                <div>
+                                <div class="imageContainer">
                                     <label for="beach"><img src="./assets/elio-santos-sHZRvLKtpXw-unsplash.jpg" alt="Swing hanging on a palm tree on the beach; Photo by Jcob Nasyr from unsplash.com"></label>
                                 </div>
                             </li>
                             <li>
                                 <input type="radio" id="city" name="travelType" value="city">
-                                <div>
+                                <div class="imageContainer">
                                     <label for="city"><img src="./assets/vincent-chan-xNjwgnh5c9Y-unsplash.jpg" alt="City scenery - apartments, taxis, and buildings; Photo by Heather Shevlin from unsplash.com"></label>
                                 </div>
                             </li>
                             <li>
                                 <input type="radio" id="food" name="travelType" value="food">
-                                <div>
+                                <div class="imageContainer>
                                     <label for="food"><img src="./assets/nate-johnston-ppUF8PVd-MA-unsplash.jpg" alt="Person taking a photo of their hamburger and fries meal; Photo by Spencer Davis from unsplash.com"></label>
                                 </div>
                             </li>
@@ -64,7 +64,7 @@
                         <ul>
                             <li>
                                 <input type="radio" id="solo" name="companions" value="solo">
-                                <label for="solo">Solo - people are overrated!</label>
+                                <label for="solo">Solo - people are kind of overrated!</label>
                             </li>
                             <li>
                                 <input type="radio" id="family" name="companions" value="family">
@@ -90,7 +90,7 @@
             <!-- Question Three (filler question; doesn't factor into the logic of the answer) -->
             <section class="questionThree" id="questionThree">
                 <div class="wrapper questionContainer">
-                    <h2>Which one looks most like a travel photo you'd take?</h2>
+                    <h2>Which one looks like a travel photo you'd take?</h2>
                         <fieldset class="interests">
                             <ul>
                                 <li>
@@ -156,20 +156,21 @@
 
             <!-- Results Section -->
             <section class="results" id="results">
-                <button type="submit">Where should I go?</button>
-                <div class="resultsContainer">
-                    <!-- destination name to be added dynamically here -->
+                <div class="wrapper">
+                    <button type="submit">Where should I go?</button>
+                    <div class="resultsContainer">
+                        <!-- destination name to be added dynamically here -->
+                    </div>
+                    <div class="imageResultsContainer">
+                        <!-- results to be added dynamically here! -->
+                    </div>
+                    <button type="reset" id="top">Take Quiz Again</button>
                 </div>
-                <div class="imageResultsContainer">
-                    <!-- results to be added dynamically here! -->
-                </div>
-                
             </section>
         </form>
     </main>
     <footer>
         <div class="wrapper">
-            <button type="reset" id="top">Take Quiz Again</button>
             <p>Created at Juno College</p>
         </div>
     </footer>

@@ -1,7 +1,18 @@
-@mixin buttonDecor() {
+@mixin anchorButtonDecor() {
     padding: 15px 25px;
     display: inline-block;
     border-radius: 8px;
     border: black solid 2px;
-    margin-top: 30px;
+    // margin-top: 50px;
+}
+
+@mixin imageHoverFocus () {
+    transform: scale(1.07);
+    transition: transform 0.4s;
+    border: $colourOne 3px solid;
+}
+
+@mixin imageSelected() {
+    transform: scale(1.07);
+    border: $colourOne solid 3px;
 }

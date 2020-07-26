@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: $bodyFont;
     font-size: 1.2rem;
 }
 
@@ -14,7 +14,7 @@ body {
 }
 
 header,
-section:not(.takeQuizAgain) {
+section {
     height: 100vh;
 }
 
@@ -22,7 +22,7 @@ h1,
 h2,
 a,
 button {
-    font-family: 'Abril Fatface', cursive;
+    font-family: $headerFont;
 }
 
 h1 {
@@ -37,34 +37,54 @@ h1 {
     align-items: center;
 }
 
-.anchorButton {
-    @include buttonDecor();
+p {
+    margin: 30px 0;
 }
 
+.anchorButton {
+    @include anchorButtonDecor();
+}
+
+/* Form Styling */
 fieldset {
     border: none;
 }
 
-input[type=radio] {
-    appearance: none;
+input[type="radio"] {
+    opacity: 0;
 }
 
-input[type=radio]+label::before {
+input[type="radio"] + label {
+    position: relative;
+    cursor: pointer;
+}
+
+input[type="radio"] + label::before {
     content: '';
-    display: inline-block;
-    border: 1px solid #000;
+    position: absolute;
+    left: -24px;
+    top: 5px;
     border-radius: 50%;
-    margin: 0 0.5em;
-    width: 15px;
-    height: 15px;
+    border: 1px solid #000;
+    width: 18px;
+    height: 18px;
 }
 
 input[type=radio]:checked+label::before {
     background-color: black;
 }
 
+input[type="radio"]:focus + label::before {
+    box-shadow: 0 0px 8px $colourOne;
+    border: 3px solid $colourOne;
+}
+
 p.error {
     margin-top: 20px;
+}
+
+button {
+    cursor: pointer;
 }
 
 

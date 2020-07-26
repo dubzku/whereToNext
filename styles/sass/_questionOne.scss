@@ -1,24 +1,25 @@
 section.questionOne {
     display: flex;
-    align-items: center;
     background-color: $backgroundColour;
-}
-
-
-section.questionOne {
     ul {
         display: flex;
         li {
             margin: 0 20px;
         }
     }
+    
+}
+
+section.questionOne input[type=radio] ~ div:hover,
+section.questionOne input[type=radio]:focus ~ div {
+    @include imageHoverFocus;
 }
 
 section.questionOne input[type=radio]:checked ~ div {
-    border: black solid 2px;
-    transform: scale(1.07);
-    transition: transform 0.4s;
+    @include imageSelected;
 }
+
+
 
 
 

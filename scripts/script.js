@@ -204,18 +204,6 @@ travelQuiz.coolScrollEffects = function() {
             }, 800);
         }
     });
-    
-    // $(".goToResult").on('click', function(event) {
-    //     if (!$('input[name=tripLength]:checked').val()) {
-    //         event.preventDefault();
-    //         $('p.errorMessage5').text(`You forgot to answer!`);
-    //     } else {
-    //         const position = $("#results").offset().top;
-    //         $("html, body").animate({
-    //             scrollTop: position
-    //         }, 800);
-    //     }
-    // });
 
     $("#top").on('click', function() {
         $("html, body").animate({
@@ -250,11 +238,12 @@ travelQuiz.quizSubmit = function () {
             const finalDestination = travelQuiz.arrayRandomizer(possibleDestinations);
 
             // Show the results in the DOM! 
-            // $('.resultsContainer').html(`<h2>${finalDestination.destName}</h2>`);
             const displayDestName = $('<h2>').text(`You should go to ${finalDestination.destName}!`);
             const displayDestPhoto = $('<img>').attr('src', finalDestination.img).attr('alt', finalDestination.alt);
             $('.resultsContainer').append(displayDestName);
             $('.imageResultsContainer').append(displayDestPhoto);
+            $('button[type=submit]').toggleClass('toggle');
+
         }
 
     })
@@ -264,6 +253,11 @@ travelQuiz.quizSubmit = function () {
 travelQuiz.resetResults = function() {
     $('button[type=reset]').on('click', function() {
         $('.resultsContainer').empty();
+        $('.imageResultsContainer').empty();
         $('p.error').empty();
+        $('button[type=submit]').toggleClass('toggle');
     })
 }
+
+
+

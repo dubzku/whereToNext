@@ -1,27 +1,22 @@
 header {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-}
-
-header {
-    background-image: linear-gradient(rgba(44, 26, 8, 0.68)), url(../assets/ian-dooley-3NCA3tbaE5I-unsplash-medium.jpg);
-    /* Photo by Ian Dooley on Unsplash */
+    background-image: linear-gradient(rgba(44, 26, 8, 0.68)), url(../assets/ian-dooley-3NCA3tbaE5I-unsplash-medium.jpg); /* Photo by Ian Dooley on Unsplash */
     background-size: cover;
     .wrapper {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
     }
 }
 
-header .anchorButton {
-    @include buttonDecor;
+.startQuiz {
+    @include anchorButtonDecor;
     color: white;
     background-color: none;
     border: white solid 3px;
+    position: absolute;
+    bottom: 120px;
 }
 
 

@@ -1,11 +1,5 @@
 section.questionThree {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-section.questionThree {
     ul {
         display: flex;
         li {
@@ -14,7 +8,11 @@ section.questionThree {
     }
 }
 
+section.questionThree input[type=radio] ~ div:hover,
+section.questionThree input[type=radio]:focus ~ div {
+    @include imageHoverFocus;
+}
+
 section.questionThree input[type=radio]:checked ~ div {
-    border: black solid 2px;
-    transform: scale(1.08);
+    @include imageSelected;
 }
