@@ -255,13 +255,19 @@ a {
   text-decoration: none;
 }
 
+/* Mint Cream */
+/* Bittersweet */
+/* Midnight Green Eagle Green */
+/* Medium Turquoise */
+/* Naples Yellow */
 html {
   font-size: 125%;
   /*20 px*/
 }
 
 body {
-  font-family: 'Abril Fatface', cursive;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
 }
 
 .wrapper {
@@ -271,33 +277,20 @@ body {
 }
 
 header,
-section {
+section:not(.takeQuizAgain) {
   height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+}
+
+h1,
+h2,
+a,
+button {
+  font-family: 'Abril Fatface', cursive;
 }
 
 h1 {
-  font-family: 'Abril Fatface', cursive;
-  color: white;
   font-size: 2rem;
-}
-
-.questionTwo,
-.questionFour,
-.results {
-  background-color: papayawhip;
+  color: white;
 }
 
 .questionContainer {
@@ -317,11 +310,11 @@ h1 {
 }
 
 .anchorButton {
-  font-family: 'Abril Fatface', cursive;
-  color: white;
-  background-color: slategray;
-  padding: 20px;
+  padding: 15px 25px;
   display: inline-block;
+  border-radius: 8px;
+  border: black solid 2px;
+  margin-top: 30px;
 }
 
 fieldset {
@@ -345,28 +338,32 @@ input[type=radio] + label::before {
 }
 
 input[type=radio]:checked + label::before {
-  background-color: red;
+  background-color: black;
 }
 
-section.questionOne ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-section.questionOne ul li {
-  margin: 0 15px;
-}
-
-input[type=radio]:checked ~ div {
-  border: gold solid 2px;
-  -webkit-transform: scale(1.08);
-          transform: scale(1.08);
+p.error {
+  margin-top: 20px;
 }
 
 header {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(160, 109, 90, 0.4))), url(../assets/ian-dooley-3NCA3tbaE5I-unsplash-medium.jpg);
-  background-image: linear-gradient(rgba(160, 109, 90, 0.4)), url(../assets/ian-dooley-3NCA3tbaE5I-unsplash-medium.jpg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(44, 26, 8, 0.68))), url(../assets/ian-dooley-3NCA3tbaE5I-unsplash-medium.jpg);
+  background-image: linear-gradient(rgba(44, 26, 8, 0.68)), url(../assets/ian-dooley-3NCA3tbaE5I-unsplash-medium.jpg);
   /* Photo by Ian Dooley on Unsplash */
   background-size: cover;
 }
@@ -385,4 +382,170 @@ header .wrapper {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+header .anchorButton {
+  padding: 15px 25px;
+  display: inline-block;
+  border-radius: 8px;
+  border: black solid 2px;
+  margin-top: 30px;
+  color: white;
+  background-color: none;
+  border: white solid 3px;
+}
+
+section.questionOne {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #F7FFF7;
+}
+
+section.questionOne ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section.questionOne ul li {
+  margin: 0 20px;
+}
+
+section.questionOne input[type=radio]:checked ~ div {
+  border: black solid 2px;
+  -webkit-transform: scale(1.07);
+          transform: scale(1.07);
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+}
+
+section.questionTwo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.questionTwo {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.6))), url(../assets/dino-reichmuth-A5rCN8626Ck-unsplash.jpg);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.6)), url(../assets/dino-reichmuth-A5rCN8626Ck-unsplash.jpg);
+  /* Photo by Dino Reichmuth on Unsplash */
+  background-size: cover;
+  background-position: center;
+}
+
+section.questionTwo fieldset {
+  border: solid black 3px;
+}
+
+section.questionTwo ul li {
+  margin: 20px 0;
+}
+
+section.questionThree {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.questionThree ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section.questionThree ul li {
+  margin: 0 15px;
+}
+
+section.questionThree input[type=radio]:checked ~ div {
+  border: black solid 2px;
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
+}
+
+section.questionFour {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.questionFour {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.6))), url(../assets/margo-brodowicz-KZHhnb6XsQI-unsplash.jpg);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.6)), url(../assets/margo-brodowicz-KZHhnb6XsQI-unsplash.jpg);
+  /* Photo by Margo Brodowicz on Unsplash */
+  background-size: cover;
+  background-position: top;
+}
+
+section.questionFour fieldset {
+  border: solid black 3px;
+}
+
+section.questionFour ul li {
+  margin: 20px 0;
+}
+
+button {
+  padding: 15px 25px;
+  display: inline-block;
+  border-radius: 8px;
+  border: black solid 2px;
+  margin-top: 30px;
+}
+
+footer {
+  background-color: slategray;
+}
+
+footer .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .wrapper button {
+  display: block;
 }

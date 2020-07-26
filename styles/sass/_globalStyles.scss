@@ -3,7 +3,8 @@ html {
 }
 
 body {
-    font-family: 'Abril Fatface', cursive;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
 }
 
 .wrapper {
@@ -13,24 +14,20 @@ body {
 }
 
 header,
-section {
+section:not(.takeQuizAgain) {
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+}
+
+h1, 
+h2,
+a,
+button {
+    font-family: 'Abril Fatface', cursive;
 }
 
 h1 {
-    font-family: 'Abril Fatface', cursive;
-    color: white;
     font-size: 2rem;
-}
-
-.questionTwo,
-.questionFour,
-.results {
-    background-color: papayawhip;
+    color: white;
 }
 
 .questionContainer {
@@ -40,13 +37,8 @@ h1 {
     align-items: center;
 }
 
-
 .anchorButton {
-    font-family: 'Abril Fatface', cursive;
-    color: white;
-    background-color: slategray;
-    padding: 20px;
-    display: inline-block;
+    @include buttonDecor();
 }
 
 fieldset {
@@ -68,22 +60,13 @@ input[type=radio]+label::before {
 }
 
 input[type=radio]:checked+label::before {
-    background-color: red;
+    background-color: black;
 }
 
-section.questionOne {
-    ul {
-        display: flex;
-        li {
-            margin: 0 15px;
-        }
-    }
+p.error {
+    margin-top: 20px;
 }
 
 
-input[type=radio]:checked ~ div {
-    border: gold solid 2px;
-    transform: scale(1.08);
-}
 
 

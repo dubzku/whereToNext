@@ -4,16 +4,21 @@ const destinations = [
         destName: "Newfoundland",
         travelType: "adventure",
         distance: "close",
+        img: "./assets/timothy-holmes-IwylBp3tNZY-unsplash.jpg",
+        alt: "newfoundland picture",
     },
     {
         destName: "Utah",
         travelType: "adventure",
         distance: "close",
+        img: "./assets/timothy-holmes-IwylBp3tNZY-unsplash.jpg",
+        alt: "newfoundland picture",
     },
     {
         destName: "Costa Rica",
         travelType: "adventure",
         distance: "middle",
+        img: "",
     },
     {
         destName: "Bolivia",
@@ -188,22 +193,10 @@ travelQuiz.coolScrollEffects = function() {
         }
     });
 
-    $(".goToQuestionFive").on('click', function(event) {
+    $(".goToResult").on('click', function(event) {
         if (!$('input[name=distance]:checked').val()) {
             event.preventDefault();
             $('p.errorMessage4').text(`You forgot to answer!`);
-        } else {
-            const position = $("#questionFive").offset().top;
-            $("html, body").animate({
-                scrollTop: position
-            }, 800);
-        }
-    });
-    
-    $(".goToResult").on('click', function(event) {
-        if (!$('input[name=tripLength]:checked').val()) {
-            event.preventDefault();
-            $('p.errorMessage5').text(`You forgot to answer!`);
         } else {
             const position = $("#results").offset().top;
             $("html, body").animate({
@@ -211,6 +204,18 @@ travelQuiz.coolScrollEffects = function() {
             }, 800);
         }
     });
+    
+    // $(".goToResult").on('click', function(event) {
+    //     if (!$('input[name=tripLength]:checked').val()) {
+    //         event.preventDefault();
+    //         $('p.errorMessage5').text(`You forgot to answer!`);
+    //     } else {
+    //         const position = $("#results").offset().top;
+    //         $("html, body").animate({
+    //             scrollTop: position
+    //         }, 800);
+    //     }
+    // });
 
     $("#top").on('click', function() {
         $("html, body").animate({
@@ -230,10 +235,9 @@ travelQuiz.quizSubmit = function () {
         userChoices.distance = $('input[name=distance]:checked').val();
         userChoices.companions = $('input[name=companions]:checked').val();
         userChoices.interests = $('input[name=interests]:checked').val();
-        userChoices.tripLength = $('input[name=tripLength]:checked').val();
 
 
-        if (!userChoices.travelType || !userChoices.distance || !userChoices.companions || !userChoices.interests || !userChoices.tripLength ) {
+        if (!userChoices.travelType || !userChoices.distance || !userChoices.companions || !userChoices.interests ) {
             $('.resultsContainer').html(`<h2>You forgot to fill in some fields!</h2>`);
         } else {
             // Filter through the destinations object and return results that match the condition of same travelType AND same distance
@@ -246,7 +250,11 @@ travelQuiz.quizSubmit = function () {
             const finalDestination = travelQuiz.arrayRandomizer(possibleDestinations);
 
             // Show the results in the DOM! 
-            $('.resultsContainer').html(`<h2>${finalDestination.destName}</h2>`);
+            // $('.resultsContainer').html(`<h2>${finalDestination.destName}</h2>`);
+            const displayDestName = $('<h2>').text(`You should go to ${finalDestination.destName}!`);
+            const displayDestPhoto = $('<img>').attr('src', finalDestination.img).attr('alt', finalDestination.alt);
+            $('.resultsContainer').append(displayDestName);
+            $('.imageResultsContainer').append(displayDestPhoto);
         }
 
     })

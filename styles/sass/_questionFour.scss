@@ -1,0 +1,21 @@
+section.questionFour {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section.questionFour {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.6)), url(../assets/margo-brodowicz-KZHhnb6XsQI-unsplash.jpg);
+    /* Photo by Margo Brodowicz on Unsplash */
+    background-size: cover;
+    background-position: top;
+}
+
+section.questionFour fieldset {
+    border: solid black 3px;
+}
+
+section.questionFour ul li {
+    margin: 20px 0;
+}

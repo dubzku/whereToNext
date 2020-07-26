@@ -1,0 +1,20 @@
+section.questionThree {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section.questionThree {
+    ul {
+        display: flex;
+        li {
+            margin: 0 15px;
+        }
+    }
+}
+
+section.questionThree input[type=radio]:checked ~ div {
+    border: black solid 2px;
+    transform: scale(1.08);
+}

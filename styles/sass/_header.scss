@@ -1,5 +1,12 @@
 header {
-    background-image: linear-gradient(rgba(160, 109, 90, 0.4)), url(../assets/ian-dooley-3NCA3tbaE5I-unsplash-medium.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    background-image: linear-gradient(rgba(44, 26, 8, 0.68)), url(../assets/ian-dooley-3NCA3tbaE5I-unsplash-medium.jpg);
     /* Photo by Ian Dooley on Unsplash */
     background-size: cover;
     .wrapper {
@@ -8,6 +15,13 @@ header {
         justify-content: center;
         align-items: center;
     }
+}
+
+header .anchorButton {
+    @include buttonDecor;
+    color: white;
+    background-color: none;
+    border: white solid 3px;
 }
 
 
