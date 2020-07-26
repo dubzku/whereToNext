@@ -4,7 +4,7 @@ html {
 
 body {
     font-family: $bodyFont;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .wrapper {
@@ -14,15 +14,19 @@ body {
 }
 
 header,
-section {
+/*section:not(.questionOne):not(.questionThree)*/ {
     height: 100vh;
 }
 
+header,
+section {
+    padding: 50px 0;
+}
+
 h1, 
-h2,
-a,
-button {
+h2 {
     font-family: $headerFont;
+    text-align: center;
 }
 
 h1 {
@@ -96,6 +100,24 @@ input[type="radio"]:focus + label::before {
 
 p.error {
     margin-top: 20px;
+    color: $colourOne;
+}
+
+.questionOne fieldset,
+.questionThree fieldset {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.containerParent {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .containerChild {
+        width: calc(275px - 30px);
+        margin: 0 15px;
+    }
 }
 
 

@@ -23,32 +23,34 @@
                 <div class="wrapper questionContainer">
                     <h2>Which traveller are you?</h2>
                     <fieldset class="travelType">
-                        <ul>
-                            <li>
+                        <div class="containerParent">
+                            <div class="containerChild">
                                 <input type="radio" id="active" name="travelType" value="adventure">
                                 <div class="imageContainer">
                                     <label for="active"><img src="./assets/sebastien-goldberg-BKLHxgbYFDI-unsplash.jpg" alt="Person hiking up a mountain; Photo by Dane Deaner from unsplash.com"></label>
                                 </div>
-                            </li>
-                            <li>
+                            </div>
+                            <div class="containerChild">
                                 <input type="radio" id="beach" name="travelType" value="beach">
                                 <div class="imageContainer">
                                     <label for="beach"><img src="./assets/elio-santos-sHZRvLKtpXw-unsplash.jpg" alt="Swing hanging on a palm tree on the beach; Photo by Jcob Nasyr from unsplash.com"></label>
                                 </div>
-                            </li>
-                            <li>
+                            </div>
+                        </div>
+                        <div class="containerParent">
+                            <div class="containerChild">
                                 <input type="radio" id="city" name="travelType" value="city">
                                 <div class="imageContainer">
                                     <label for="city"><img src="./assets/vincent-chan-xNjwgnh5c9Y-unsplash.jpg" alt="City scenery - apartments, taxis, and buildings; Photo by Heather Shevlin from unsplash.com"></label>
                                 </div>
-                            </li>
-                            <li>
+                            </div>
+                            <div class="containerChild">
                                 <input type="radio" id="food" name="travelType" value="food">
-                                <div class="imageContainer>
+                                <div class="imageContainer">
                                     <label for="food"><img src="./assets/nate-johnston-ppUF8PVd-MA-unsplash.jpg" alt="Person taking a photo of their hamburger and fries meal; Photo by Spencer Davis from unsplash.com"></label>
                                 </div>
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
                     </fieldset>
                     <div class="errorContainer">
                         <p class="error errorMessage1"></p>
@@ -91,35 +93,37 @@
             <!-- Question Three (filler question; doesn't factor into the logic of the answer) -->
             <section class="questionThree" id="questionThree">
                 <div class="wrapper questionContainer">
-                    <h2>Which one looks like a travel photo you'd take?</h2>
-                        <fieldset class="interests">
-                            <ul>
-                                <li>
-                                    <input type="radio" id="museums" name="interests" value="museums">
-                                    <div>
-                                        <label for="museums"><img src="./assets/mitchell-luo-0nIVzbZanCI-unsplash.jpg" alt=""></label>
-                                    </div>
-                                </li>
-                                <li>
-                                    <input type="radio" id="adventure" name="interests" value="nature">
-                                    <div>
-                                        <label for="adventure"><img src="./assets/lance-anderson-Fi84zHyc4gY-unsplash.jpg" alt=""></label>
-                                    </div>
-                                </li>
-                                <li>
-                                    <input type="radio" id="foodie" name="interests" value="restaurants">
-                                    <div>
-                                        <label for="foodie"><img src="./assets/inga-barma-4cZdtpvpEko-unsplash.jpg" alt=""></label>
-                                    </div>
-                                </li>
-                                <li>
-                                    <input type="radio" id="poolside" name="interests" value="rest">
-                                    <div>
-                                        <label for="poolside"><img src="./assets/chandra-oh-Fg-Ze2uoOdM-unsplash.jpg" alt=""></label>
-                                    </div>
-                                </li>
-                            </ul>
-                        </fieldset>
+                    <h2>Which looks like a photo you'd take?</h2>
+                    <fieldset class="interests">
+                        <div class="containerParent">
+                            <div class="containerChild">
+                                <input type="radio" id="museums" name="interests" value="museums">
+                                <div class="imageContainer">
+                                    <label for="museums"><img src="./assets/mitchell-luo-0nIVzbZanCI-unsplash.jpg" alt=""></label>
+                                </div>
+                            </div>
+                            <div class="containerChild">
+                                <input type="radio" id="adventure" name="interests" value="nature">
+                                <div class="imageContainer">
+                                    <label for="adventure"><img src="./assets/lance-anderson-Fi84zHyc4gY-unsplash.jpg" alt=""></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="containerParent">
+                            <div class="containerChild">
+                                <input type="radio" id="foodie" name="interests" value="restaurants">
+                                <div class="imageContainer">
+                                    <label for="foodie"><img src="./assets/inga-barma-4cZdtpvpEko-unsplash.jpg" alt=""></label>
+                                </div>
+                            </div>
+                            <div class="containerChild">
+                                <input type="radio" id="poolside" name="interests" value="rest">
+                                <div class="imageContainer">
+                                    <label for="poolside"><img src="./assets/chandra-oh-Fg-Ze2uoOdM-unsplash.jpg" alt=""></label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
                     <div>
                         <p class="error errorMessage3"><!-- error handling message here --></p>
                     </div>
@@ -172,7 +176,7 @@
     </main>
     <footer>
         <div class="wrapper">
-            <p>Created at Juno College</p>
+            <p>Created at <a href="https://junocollege.com/" target="_blank">Juno College</a></p>
         </div>
     </footer>
     <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>

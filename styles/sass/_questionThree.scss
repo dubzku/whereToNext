@@ -1,11 +1,5 @@
 section.questionThree {
     display: flex;
-    ul {
-        display: flex;
-        li {
-            margin: 0 15px;
-        }
-    }
 }
 
 section.questionThree input[type=radio] ~ div:hover,

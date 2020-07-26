@@ -267,7 +267,7 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .wrapper {
@@ -276,16 +276,19 @@ body {
   margin: 0 auto;
 }
 
-header,
-section {
+header {
   height: 100vh;
 }
 
+header,
+section {
+  padding: 50px 0;
+}
+
 h1,
-h2,
-a,
-button {
+h2 {
   font-family: "Abril Fatface", cursive;
+  text-align: center;
 }
 
 h1 {
@@ -324,6 +327,7 @@ button {
   padding: 15px 25px;
   display: inline-block;
   border-radius: 8px;
+  font-family: "Abril Fatface", cursive;
   border: #1A535C solid 2px;
   background-color: #FF6B6B;
   color: #F7FFF7;
@@ -376,6 +380,35 @@ input[type="radio"]:focus + label::before {
 
 p.error {
   margin-top: 20px;
+  color: #FF6B6B;
+}
+
+.questionOne fieldset,
+.questionThree fieldset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.containerParent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.containerParent .containerChild {
+  width: calc(275px - 30px);
+  margin: 0 15px;
 }
 
 header {
@@ -457,17 +490,6 @@ section.questionOne {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #F7FFF7;
-}
-
-section.questionOne ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-section.questionOne ul li {
-  margin: 0 20px;
 }
 
 section.questionOne input[type=radio] ~ div:hover,
@@ -498,32 +520,18 @@ section.questionTwo {
 }
 
 section.questionTwo fieldset {
-  padding: 50px;
+  padding: 25px;
   border: #F7FFF7 double 5px;
 }
 
 section.questionTwo fieldset ul li {
-  margin: 20px 0;
-}
-
-section.questionTwo h2 {
-  text-align: center;
+  margin: 35px 0;
 }
 
 section.questionThree {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-section.questionThree ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-section.questionThree ul li {
-  margin: 0 15px;
 }
 
 section.questionThree input[type=radio] ~ div:hover,
@@ -555,16 +563,12 @@ section.questionFour {
 }
 
 section.questionFour fieldset {
-  padding: 50px;
-  border: #000 double 3px;
-}
-
-section.questionFour h2 {
-  text-align: center;
+  padding: 25px;
+  border: #000 double 5px;
 }
 
 section.questionFour ul li {
-  margin: 30px 0;
+  margin: 35px 0;
 }
 
 section.results {
@@ -600,4 +604,13 @@ footer {
   color: #FFF;
   padding: 15px 0;
   margin-top: 20px;
+}
+
+footer a {
+  color: #FF6B6B;
+}
+
+footer a:hover, footer a:focus {
+  text-decoration: underline;
+  color: #FFF;
 }

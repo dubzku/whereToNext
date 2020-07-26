@@ -5,13 +5,10 @@ section.questionTwo {
     background-position: center;
     color: $colourFive;
     fieldset {
-        padding: 50px;
+        padding: 25px;
         border: $colourFive double 5px;
         ul li {
-            margin: 20px 0;
+            margin: 35px 0;
         }
-    }
-    h2 {
-        text-align: center;
     }
 }

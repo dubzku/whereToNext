@@ -1,13 +1,5 @@
 section.questionOne {
     display: flex;
-    background-color: $colourFive;
-    ul {
-        display: flex;
-        li {
-            margin: 0 20px;
-        }
-    }
-    
 }
 
 section.questionOne input[type=radio] ~ div:hover,
@@ -18,6 +10,8 @@ section.questionOne input[type=radio]:focus ~ div {
 section.questionOne input[type=radio]:checked ~ div {
     @include imageSelected;
 }
+
+
 
 
 

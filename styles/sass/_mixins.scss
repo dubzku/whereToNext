@@ -2,6 +2,7 @@
     padding: 15px 25px;
     display: inline-block;
     border-radius: 8px;
+    font-family: $headerFont;
 }
 
 @mixin buttonColours() {
