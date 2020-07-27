@@ -1,15 +1,12 @@
 section.results {
-    padding-top: 50px;
     display: flex;
-    .wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    }
 }
 
-.toggle {
-    visibility: hidden;
+.imageResultsContainer {
+    margin: 30px 0;
+    img {
+        border: $colourTwo solid 4px;
+        border-radius: 12px;
+    }
 }
 

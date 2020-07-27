@@ -260,6 +260,7 @@ a {
 /* Medium Turquoise */
 /* Naples Yellow */
 /* Mint Cream */
+/* Global Styles */
 html {
   font-size: 125%;
   /*20 px*/
@@ -276,10 +277,6 @@ body {
   margin: 0 auto;
 }
 
-header {
-  height: 100vh;
-}
-
 header,
 section {
   padding: 50px 0;
@@ -293,13 +290,18 @@ h2 {
 
 h1 {
   font-size: 2.4rem;
-  color: white;
+  color: #FFF;
 }
 
-.questionOne,
-.questionThree,
-.results {
+section.questionOne,
+section.questionThree,
+section.results {
   background-color: #F7FFF7;
+}
+
+section.questionTwo,
+footer {
+  background-color: #1A535C;
 }
 
 .questionContainer {
@@ -322,6 +324,7 @@ p:not(footer p) {
   margin: 30px 0;
 }
 
+/* Button Styles */
 .anchorButton,
 button {
   padding: 15px 25px;
@@ -345,7 +348,7 @@ button:focus {
   transition: all 0.3s;
 }
 
-/* Form Styling */
+/* Form/Radio Input Styling */
 fieldset {
   border: none;
 }
@@ -378,13 +381,9 @@ input[type="radio"]:focus + label::before {
   border: 3px solid #FF6B6B;
 }
 
-p.error {
-  margin-top: 20px;
-  color: #FF6B6B;
-}
-
-.questionOne fieldset,
-.questionThree fieldset {
+/* For section.questionOne and section.questionThree*/
+section.questionOne fieldset,
+section.questionThree fieldset {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -411,17 +410,25 @@ p.error {
   margin: 0 15px;
 }
 
+/* Error message that gets dynamically added when user skips a question */
+p.error {
+  margin-top: 20px;
+  color: #FF6B6B;
+}
+
 header {
+  background-image: -webkit-gradient(linear, right top, left bottom, from(#FFF), to(rgba(26, 83, 92, 0.68))), url(../assets/harley-davidson-56R8TzG7Lzc-unsplash.jpg);
+  background-image: linear-gradient(to bottom left, #FFF, rgba(26, 83, 92, 0.68)), url(../assets/harley-davidson-56R8TzG7Lzc-unsplash.jpg);
+  /* Photo by @harleydavidson on unsplash.com */
+  background-size: cover;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: -webkit-gradient(linear, right top, left bottom, from(white), to(rgba(26, 83, 92, 0.68))), url(../assets/harley-davidson-56R8TzG7Lzc-unsplash.jpg);
-  background-image: linear-gradient(to bottom left, white, rgba(26, 83, 92, 0.68)), url(../assets/harley-davidson-56R8TzG7Lzc-unsplash.jpg);
-  /* Photo by Ian Dooley on Unsplash */
-  background-size: cover;
+  text-align: center;
 }
 
 header .wrapper {
@@ -437,9 +444,8 @@ header .wrapper {
           align-items: center;
 }
 
-header p {
-  position: relative;
-  top: 110px;
+header .wrapper p {
+  margin-top: 40px;
 }
 
 .startQuiz {
@@ -494,28 +500,25 @@ section.questionOne {
 
 section.questionOne input[type=radio] ~ div:hover,
 section.questionOne input[type=radio]:focus ~ div {
-  -webkit-transform: scale(1.07);
-          transform: scale(1.07);
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
   -webkit-transition: -webkit-transform 0.4s;
   transition: -webkit-transform 0.4s;
   transition: transform 0.4s;
   transition: transform 0.4s, -webkit-transform 0.4s;
-  border: #FF6B6B 3px solid;
+  border: #000 3px solid;
 }
 
 section.questionOne input[type=radio]:checked ~ div {
-  -webkit-transform: scale(1.07);
-          transform: scale(1.07);
-  border: #000 solid 3px;
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
+  border: #FF6B6B solid 3px;
 }
 
 section.questionTwo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #1A535C;
-  background-size: cover;
-  background-position: center;
   color: #F7FFF7;
 }
 
@@ -536,19 +539,19 @@ section.questionThree {
 
 section.questionThree input[type=radio] ~ div:hover,
 section.questionThree input[type=radio]:focus ~ div {
-  -webkit-transform: scale(1.07);
-          transform: scale(1.07);
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
   -webkit-transition: -webkit-transform 0.4s;
   transition: -webkit-transform 0.4s;
   transition: transform 0.4s;
   transition: transform 0.4s, -webkit-transform 0.4s;
-  border: #FF6B6B 3px solid;
+  border: #000 3px solid;
 }
 
 section.questionThree input[type=radio]:checked ~ div {
-  -webkit-transform: scale(1.07);
-          transform: scale(1.07);
-  border: #000 solid 3px;
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
+  border: #FF6B6B solid 3px;
 }
 
 section.questionFour {
@@ -567,39 +570,26 @@ section.questionFour fieldset {
   border: #000 double 5px;
 }
 
-section.questionFour ul li {
+section.questionFour fieldset ul li {
   margin: 35px 0;
 }
 
 section.results {
-  padding-top: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-section.results .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.imageResultsContainer {
+  margin: 30px 0;
 }
 
-.toggle {
-  visibility: hidden;
+.imageResultsContainer img {
+  border: #1A535C solid 4px;
+  border-radius: 12px;
 }
 
 footer {
-  background-color: #1A535C;
   text-align: center;
   color: #FFF;
   padding: 15px 0;

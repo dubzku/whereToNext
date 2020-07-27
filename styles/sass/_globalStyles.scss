@@ -1,3 +1,5 @@
+/* Global Styles */
+
 html {
     font-size: 125%; /*20 px*/
 }
@@ -14,11 +16,6 @@ body {
 }
 
 header,
-/*section:not(.questionOne):not(.questionThree)*/ {
-    height: 100vh;
-}
-
-header,
 section {
     padding: 50px 0;
 }
@@ -31,13 +28,18 @@ h2 {
 
 h1 {
     font-size: 2.4rem;
-    color: white;
+    color: #FFF;
 }
 
-.questionOne,
-.questionThree,
-.results {
+section.questionOne,
+section.questionThree,
+section.results {
     background-color: $colourFive;
+}
+
+section.questionTwo,
+footer {
+    background-color: $colourTwo;
 }
 
 .questionContainer {
@@ -51,6 +53,7 @@ p:not(footer p) {
     margin: 30px 0;
 }
 
+/* Button Styles */
 .anchorButton,
 button {
     @include buttonStyles();
@@ -65,7 +68,7 @@ button {
     }
 }
 
-/* Form Styling */
+/* Form/Radio Input Styling */
 fieldset {
     border: none;
 }
@@ -98,13 +101,9 @@ input[type="radio"]:focus + label::before {
     border: 3px solid $colourOne;
 }
 
-p.error {
-    margin-top: 20px;
-    color: $colourOne;
-}
-
-.questionOne fieldset,
-.questionThree fieldset {
+/* For section.questionOne and section.questionThree*/
+section.questionOne fieldset,
+section.questionThree fieldset {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -118,6 +117,12 @@ p.error {
         width: calc(275px - 30px);
         margin: 0 15px;
     }
+}
+
+/* Error message that gets dynamically added when user skips a question */
+p.error {
+    margin-top: 20px;
+    color: $colourOne;
 }
 
 

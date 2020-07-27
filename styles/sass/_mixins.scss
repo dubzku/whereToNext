@@ -12,12 +12,12 @@
 }
 
 @mixin imageHoverFocus () {
-    transform: scale(1.07);
+    transform: scale(1.04);
     transition: transform 0.4s;
-    border: $colourOne 3px solid;
+    border: #000 3px solid;
 }
 
 @mixin imageSelected() {
-    transform: scale(1.07);
-    border: #000 solid 3px;
+    transform: scale(1.04);
+    border: $colourOne solid 3px;
 }

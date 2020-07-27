@@ -1,16 +1,17 @@
 header {
+    background-image: linear-gradient(to bottom left, #FFF, rgba(26, 83, 92, 0.68)), url(../assets/harley-davidson-56R8TzG7Lzc-unsplash.jpg); /* Photo by @harleydavidson on unsplash.com */
+    background-size: cover;
+    height: 100vh;
     display: flex;
     align-items: center;
-    background-image: linear-gradient(to bottom left, white, rgba(26, 83, 92, 0.68)), url(../assets/harley-davidson-56R8TzG7Lzc-unsplash.jpg); /* Photo by Ian Dooley on Unsplash */
-    background-size: cover;
+    text-align: center;
     .wrapper {
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-    p {
-        position: relative;
-        top: 110px;
+        p {
+            margin-top: 40px;
+        }
     }
 }
 
