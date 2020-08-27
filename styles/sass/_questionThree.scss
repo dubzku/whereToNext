@@ -2,6 +2,10 @@ section.questionThree {
     display: flex;
 }
 
+section.questionThree input[type=radio] ~ div {
+    border: transparent 3px solid;
+}
+
 section.questionThree input[type=radio] ~ div:hover,
 section.questionThree input[type=radio]:focus ~ div {
     @include imageHoverFocus;
