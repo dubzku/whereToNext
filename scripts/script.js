@@ -260,8 +260,20 @@ travelQuiz.coolScrollEffects = function() {
 
 // Function for clearing the error message when a radio input is selected
 travelQuiz.clearErrorMessage = function() {
-    $('main').on('click','input[type="radio"]', function() {
-        $('.error').empty();
+    $('main').on('click','input[name="travelType"]', function() {
+        $('.errorMessage1').empty();
+    })
+
+    $('main').on('click','input[name="companions"]', function() {
+        $('.errorMessage2').empty();
+    })
+
+    $('main').on('click','input[name="interests"]', function() {
+        $('.errorMessage3').empty();
+    })
+
+    $('main').on('click','input[name="distance"]', function() {
+        $('.errorMessage4').empty();
     })
 }
 
