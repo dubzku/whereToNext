@@ -183,6 +183,7 @@ travelQuiz.init = function() {
     travelQuiz.coolScrollEffects();
     travelQuiz.quizSubmit();
     travelQuiz.resetResults();
+    travelQuiz.clearErrorMessage();
 }
 
 // Helper Function to give back a random item from a given array
@@ -211,7 +212,6 @@ travelQuiz.coolScrollEffects = function() {
             $htmlBody.animate({
                 scrollTop: position
             }, 800);
-            $("p.errorMessage1").text("");
         }
     });
 
@@ -224,7 +224,6 @@ travelQuiz.coolScrollEffects = function() {
             $htmlBody.animate({
                 scrollTop: position
             }, 800);
-            $("p.errorMessage2").text("");
         }
     });
 
@@ -237,7 +236,6 @@ travelQuiz.coolScrollEffects = function() {
             $htmlBody.animate({
                 scrollTop: position
             }, 800);
-            $("p.errorMessage3").text("");
         }
     });
 
@@ -250,7 +248,6 @@ travelQuiz.coolScrollEffects = function() {
             $htmlBody.animate({
                 scrollTop: position
             }, 800);
-            $("p.errorMessage4").text("");
         }
     });
 
@@ -259,6 +256,13 @@ travelQuiz.coolScrollEffects = function() {
             scrollTop: 0
         }, 800);
     });
+}
+
+// Function for clearing the error message when a radio input is selected
+travelQuiz.clearErrorMessage = function() {
+    $('main').on('click','input[type="radio"]', function() {
+        $('.error').empty();
+    })
 }
 
 // Function for when user submits their quiz answers

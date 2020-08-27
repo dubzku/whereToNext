@@ -202,15 +202,6 @@ template {
   display: none;
 }
 
-.clearfix:after {
-  visibility: hidden;
-  display: block;
-  font-size: 0;
-  content: '';
-  clear: both;
-  height: 0;
-}
-
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -221,7 +212,7 @@ html {
           box-sizing: inherit;
 }
 
-.sr-only {
+.srOnly {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -336,6 +327,7 @@ button {
   color: #F7FFF7;
   margin: 20px 0;
   cursor: pointer;
+  border: transparent solid 3.5px;
 }
 
 .anchorButton:hover, .anchorButton:focus,
@@ -414,6 +406,7 @@ section.questionThree fieldset {
 p.error {
   margin-top: 20px;
   color: #FF6B6B;
+  height: 20px;
 }
 
 header {
@@ -498,6 +491,10 @@ section.questionOne {
   display: flex;
 }
 
+section.questionOne input[type=radio] ~ div {
+  border: transparent 3px solid;
+}
+
 section.questionOne input[type=radio] ~ div:hover,
 section.questionOne input[type=radio]:focus ~ div {
   -webkit-transform: scale(1.04);
@@ -535,6 +532,10 @@ section.questionThree {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+section.questionThree input[type=radio] ~ div {
+  border: transparent 3px solid;
 }
 
 section.questionThree input[type=radio] ~ div:hover,
